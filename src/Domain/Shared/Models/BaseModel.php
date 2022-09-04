@@ -9,6 +9,8 @@ abstract class BaseModel extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     protected static function newFactory()
     {
         $parts = str(get_called_class())->explode('\\');
